@@ -16,9 +16,11 @@ class CommentsController < ApplicationController
   # so let's add that to the app/views/articles/show.html.erb.
 
   def create
-    @article = Article.find(params[:article_id])
-    @comment = @article.comments.create(comment_params)
-    redirect_to article_path(@article)
+    # if user_signed_in?
+      @article = Article.find(params[:article_id])
+      @comment = @article.comments.create(comment_params)
+      redirect_to article_path(@article)
+    # end
   end
 
   private

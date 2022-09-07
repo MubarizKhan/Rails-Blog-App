@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!
+  # has_many: :comments
+  # dependent: :destroy
+  # has_many :comments, dependent: :nullify
 
   def index
     @articles = Article.all
@@ -22,7 +26,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article = Article.new(article_params)
+    @article = Article.find(params[:id])
     if @article.update(article_params)
       redirect_to @article
     else
@@ -51,9 +55,14 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article = Article.find(params[:id])
+    # @comment = @article.comments.find(params[:id])
+    # @comment.destroy
+    # if @article.comments
+      # @article.comments.destroy
     @article.destroy
-
+    # end
     redirect_to root_path
+
   end
   # Using Strong Parameters
   private

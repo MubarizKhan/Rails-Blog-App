@@ -1,5 +1,6 @@
 class Article < ApplicationRecord
-  has_many :comments
+  # has_many :comments
+  has_many :comments, dependent: :destroy
   # The first validation declares that a title value must be present.
   # Because title is a string, this means that the title value must contain at least one non-whitespace character.
   # The second validation declares that a body value must also be present.
