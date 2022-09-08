@@ -9,6 +9,9 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    # @index = self.index
+    # @all = Article.all
+    # @index.save
     @article = Article.find(params[:id])
   end
 
