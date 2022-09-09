@@ -1,17 +1,11 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!
-  # has_many: :comments
-  # dependent: :destroy
-  # has_many :comments, dependent: :nullify
 
   def index
     @articles = Article.all
   end
 
   def show
-    # @index = self.index
-    # @all = Article.all
-    # @index.save
     @article = Article.find(params[:id])
   end
 
@@ -58,14 +52,13 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article = Article.find(params[:id])
-    # @comment = @article.comments.find(params[:id])
-    # @comment.destroy
-    # if @article.comments
-      # @article.comments.destroy
     @article.destroy
-    # end
-    redirect_to root_path
-
+    if @article.present?
+      @article.destroy
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
   end
   # Using Strong Parameters
   private
@@ -80,6 +73,7 @@ class ArticlesController < ApplicationController
   # In fact, if we pass the unfiltered params[:article] Hash directly to Article.new,
   # Rails will raise a ForbiddenAttributesError to alert us about the problem.
   # So we will use a feature of Rails called Strong Parameters to filter params. Think of it as strong typing for params.
+
     def article_params
       params.require(:article).permit(:title, :body)
     end

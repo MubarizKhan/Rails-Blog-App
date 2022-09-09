@@ -4,7 +4,10 @@
   <% @articles.each do |article|%>
   <li>
     <%= link_to article.title, article %>
+    <%# <%= link_to "Destroy", article_path(article), method: :delete, data: { confirm: "Are you sure?" } %>
   </li>
+    <%# <li></li> %>
+
   <% end %>
 
 </ul>
