@@ -14,9 +14,9 @@
             <%= link_to "About Us", articles_path, class:"nav-link" %>
           </li>
 
-           <%# <li class="nav-item"> %>
-          <%# <%= link_to "Pay Money!", invoice_proposals_path, class:"nav-link" %> %>
-        <%# </li> %>
+           <li class="nav-item">
+           <%= link_to "Pay Money!", payment_invoices_path, class:"nav-link" %>
+         </li>
 
           <% if user_signed_in? %>
         <li class="nav-item">

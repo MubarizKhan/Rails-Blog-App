@@ -1,0 +1,14 @@
+<%# <h1> hello </h1> %>
+
+<h1>Payments in invoice Table </h1>
+
+<ul>
+  <% @invoices.each do |invoice|%>
+  <li>
+    <%= link_to "invoice.username", payment_invoices_path %>
+  </li>
+    <%# <li></li> %>
+
+  <% end %>
+
+</ul>

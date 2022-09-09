@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Comment < ApplicationRecord
   # This is very similar to the Article model that you saw earlier.
   # The difference is the line belongs_to :article, which sets up an Active Record association.

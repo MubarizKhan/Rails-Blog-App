@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ArticlesController < ApplicationController
   before_action :authenticate_user!
 
@@ -45,27 +47,24 @@ class ArticlesController < ApplicationController
     end
   end
 
-  #redirect_to will cause the browser to make a new request, whereas render renders the specified view for the current request.
+  # redirect_to will cause the browser to make a new request, whereas render renders the specified view for the current request.
   # It is important to use redirect_to after mutating the database or application state.
   # Otherwise, if the user refreshes the page, the browser will make the same request, and the mutation will be repeated.
-
 
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
-    if @article.present?
-      @article.destroy
-      redirect_to root_path
-    else
-      redirect_to root_path
-    end
+    @article.destroy if @article.present?
+    redirect_to root_path
   end
   # Using Strong Parameters
+
   private
+
   # Submitted form data is put into the params Hash, alongside captured route parameters.
   # Thus, the create action can access the submitted title via params[:article][:title] and the submitted body via params[:article][:body].
   #  We could pass these values individually to Article.new, but that would be verbose and possibly error-prone.
-    # And it would become worse as we add more fields.
+  # And it would become worse as we add more fields.
 
   # Instead, we will pass a single Hash that contains the values.
   # However, we must still specify what values are allowed in that Hash.
@@ -74,8 +73,8 @@ class ArticlesController < ApplicationController
   # Rails will raise a ForbiddenAttributesError to alert us about the problem.
   # So we will use a feature of Rails called Strong Parameters to filter params. Think of it as strong typing for params.
 
-    def article_params
-      params.require(:article).permit(:title, :body)
-    end
+  def article_params
+    params.require(:article).permit(:title, :body)
+  end
 end
 # end

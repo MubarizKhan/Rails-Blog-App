@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users
 
@@ -6,7 +8,12 @@ Rails.application.routes.draw do
   root 'articles#index'
 
   resources :articles do
-  resources :comments
+    resources :comments
+  end
+
+  namespace :payment do
+    resources :invoices
+    resources :stripes
   end
   # get "/articles/index"
   # get "/articles/index", to: "articles#index"
@@ -19,5 +26,4 @@ Rails.application.routes.draw do
 
   # get "/proposals/index", to: "proposals#index"
   # /home/devntech/MubarizDT/begin_rails/blog-app/blog/app/views/proposals
-
 end
