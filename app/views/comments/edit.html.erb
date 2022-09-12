@@ -1,0 +1,8 @@
+<h1> hi, this is the edit comment form </h1>
+
+<%# <%= @article.id %>
+<%= @comment.id %>
+<%= @comment.commenter %>
+<%= @comment.body %>
+
+<%= render 'editform', comment: @comment %>

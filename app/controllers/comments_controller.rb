@@ -24,6 +24,26 @@ class CommentsController < ApplicationController
     # end
   end
 
+  def edit
+    @comment = Comment.find(params[:article_id])
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    # @article = Article.find(params[:id])
+    @comment = Comment.find(params[:id])
+    # @comment = @article.comments.edit(params[:comment_id])
+    # byebug
+    if @comment.update(comment_params)
+      flash[:notice] = "You updated your comment!"
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+
+
   private
 
   def comment_params

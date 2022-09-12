@@ -1,9 +1,14 @@
 <p>
+  <%= comment.id%>
   <strong>Commenter:</strong>
   <%= comment.commenter %>
 </p>
 
 <p>
-  <strong>Comment:</strong>
+  <strong>Comment: </strong>
   <%= comment.body %>
 </p>
+
+<ul>
+<li><%= link_to "edit article comment",  edit_article_comment_path(comment.id) %></li>
+</ul>

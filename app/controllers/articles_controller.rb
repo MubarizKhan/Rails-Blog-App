@@ -60,7 +60,7 @@ class ArticlesController < ApplicationController
   # Using Strong Parameters
 
   def archive
-
+x``
   end
 
   private
