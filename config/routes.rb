@@ -23,7 +23,9 @@ Rails.application.routes.draw do
     resources :stripes
   end
 
-  resource :user, only: :show
+  # resource :user, only: :
+
+  resources :users
 
   put "/article/:id/like", to: "likes#like"
   # resource :posts do
