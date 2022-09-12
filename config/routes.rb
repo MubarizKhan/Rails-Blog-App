@@ -7,7 +7,14 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'articles#index'
 
+  # resources :articles
+  # resources :comments
+
+
   resources :articles do
+    member do
+      get 'archive'
+    end
     resources :comments
   end
 
@@ -15,6 +22,14 @@ Rails.application.routes.draw do
     resources :invoices
     resources :stripes
   end
+
+  resource :user, only: :show
+
+  put "/article/:id/like", to: "likes#like"
+  # resource :posts do
+  #   post :archive, on: :member
+  # end
+
   # get "/articles/index"
   # get "/articles/index", to: "articles#index"
   # get "/articles/:id", to: "articles#show"

@@ -59,6 +59,10 @@ class ArticlesController < ApplicationController
   end
   # Using Strong Parameters
 
+  def archive
+
+  end
+
   private
 
   # Submitted form data is put into the params Hash, alongside captured route parameters.
