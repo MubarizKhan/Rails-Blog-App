@@ -7,9 +7,10 @@ class ApplicationController < ActionController::Base
   # before_action :authenticate_user!
 
   private
+
   def require_login
     unless signed_in?
-      flash[:error] = "You must be logged in to access this section"
+      flash[:error] = 'You must be logged in to access this section'
       # redirect_to / # halts request cycle
       # byebug
     end

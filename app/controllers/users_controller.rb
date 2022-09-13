@@ -1,5 +1,6 @@
-class UsersController < ApplicationController
+# frozen_string_literal: true
 
+class UsersController < ApplicationController
   def index
     @users = User.all
   end
@@ -20,7 +21,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email)
     # params.require(:article).permit(:title, :body)
-
   end
-
 end

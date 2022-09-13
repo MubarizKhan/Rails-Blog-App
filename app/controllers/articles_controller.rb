@@ -59,8 +59,7 @@ class ArticlesController < ApplicationController
   end
   # Using Strong Parameters
 
-  def archive
-  end
+  def archive; end
 
   private
 
@@ -79,7 +78,5 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :body)
   end
-
-
 end
 # end

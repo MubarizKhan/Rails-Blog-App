@@ -1,7 +1,9 @@
-class Payment::StripesController < ApplicationController
-  before_action :authenticate_user!
+# frozen_string_literal: true
 
-  def index
+module Payment
+  class StripesController < ApplicationController
+    before_action :authenticate_user!
 
+    def index; end
   end
 end

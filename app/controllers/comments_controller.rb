@@ -35,14 +35,12 @@ class CommentsController < ApplicationController
     # @comment = @article.comments.edit(params[:comment_id])
     # byebug
     if @comment.update(comment_params)
-      flash[:notice] = "You updated your comment!"
+      flash[:notice] = 'You updated your comment!'
       redirect_to root_path
     else
       render :edit
     end
   end
-
-
 
   private
 
