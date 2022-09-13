@@ -1,29 +1,13 @@
-<%= form_with model: @invoices  do |form| %>
-<%# <%= form_with model: @article do |form| %>
-
-    <div class="mb-3">
-    <div class="field form-group">
+<%= form_with model:@invoices do |form| %>
+  <p>
     <%= form.label :username %><br>
     <%= form.text_field :username %>
-    <% @invoice.errors.full_messages_for(:username).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-  </div>
-
-  <div class="mb-3">
-  <div class="field form-group">
-  <%# <div> %>
+  </p>
+  <p>
     <%= form.label :amount %><br>
-    <%= form.text_area :amount %><br>
-    <% @invoice.errors.full_messages_for(:amount).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-  </div>
-
-  </br>
-  <div class="actions">
-    <%= form.submit class:'btn btn-secondary' %>
-  </div>
+    <%= form.text_area :amount %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
 <% end %>
