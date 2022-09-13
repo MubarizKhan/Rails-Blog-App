@@ -1,7 +1,10 @@
 
 $('.destroy').bind('ajax:success', function() {
 	$(this).closest('li').remove();
+
+	alert("This is an alert message!");
+	<% byebug %>
 });
 
 <%# debugger %>
-<%# <% byebug %> %>
+
