@@ -19,15 +19,26 @@ Rails.application.routes.draw do
   end
 
   namespace :payment do
-    resources :invoices
-    resources :stripes
+    resources :invoices, :stripes
   end
+
+  # namespace :payment do
+  #   resources :stripes
+  # end
+  # resources :stripes
 
   # resource :user, only: :
 
   resources :users
 
   put "/article/:id/like", to: "likes#like"
+
+
+  post "payment/invoices/new", to: "payment/invoices#new"
+  # resources :invoices
+  # new_payment_invoice_path
+  # post "/payment/invoices", to: "payment/invoices#new"
+  # post "/payment/invoices",to: "payment/invoices#create"
   # resource :posts do
   #   post :archive, on: :member
   # end

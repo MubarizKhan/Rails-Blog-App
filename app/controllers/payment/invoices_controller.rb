@@ -12,6 +12,9 @@ class Payment::InvoicesController < ApplicationController
 
   def new
     @invoice = Invoice.new
+
+
+    # @invoice.save
   end
 
   def create

@@ -2,14 +2,9 @@
 
 <h1>Payments in invoice Table </h1>
 
-<ul>
-  <% @invoices.each do |invoice|%>
-  <li>
-    <%# <%= link_to "invoice.id: ".concat(invoice.id.to_s),   payment_invoice_path(invoice)  %> %>
-    <%= link_to "Create new invoice",   new_payment_invoice_path  %>
-  </li>
-</ul>
-<% end %>
+  <%# <%= link_to "invoice.id: ".concat(invoice.id.to_s),   payment_invoice_path(invoice)  %>
+    <%= link_to "Create new invoice", new_payment_invoice_path %>
+
     <%# <li></li> %>
 
 
