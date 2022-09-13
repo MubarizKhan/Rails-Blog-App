@@ -5,7 +5,7 @@
 <ul>
   <% @invoices.each do |invoice|%>
   <li>
-    <%= link_to "invoice.username", payment_invoices_path %>
+    <%= link_to "invoice.id: ".concat(invoice.id.to_s),   payment_invoice_path(invoice)  %>
   </li>
     <%# <li></li> %>
 

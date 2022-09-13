@@ -6,5 +6,15 @@ class Payment::InvoicesController < ApplicationController
     @invoices = Invoice.all
   end
 
+  def show
+    @invoice = Invoice.find(params[:id])
+  end
+
+
+  private
+
+  def invoice_params
+    params.require(:invoice).permit(:username, :amount)
+  end
 
 end
