@@ -1,3 +1,7 @@
 <% @users.each do |user| %>
-  <%= user.email %><br/>
+  <li><%= user.email %><br/></li>
+  <li><%= user.id %><br/></li>
+  <li><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' },class: "remove_user", :remote => true %></li>
+
+
 <% end %>
