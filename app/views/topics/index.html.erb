@@ -1,13 +1,10 @@
 <b>Topics</b>
 
+
+
 <ul id="topic">
-  <% @topics.each do |topic|%>
-  <li>
-    <%= link_to topic.topic_name, topics_path %>
-  </li>
+<%= render @topics %>
 </ul>
-<% end %>
-<br>
 
 <%= form_with model: @topic do |form| %>
   <%= form.label :topicname %><br>
