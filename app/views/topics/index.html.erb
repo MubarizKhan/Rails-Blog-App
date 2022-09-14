@@ -1,0 +1,17 @@
+<b>Topics</b>
+
+<ul id="topic">
+  <% @topics.each do |topic|%>
+  <li>
+    <%= link_to topic.topic_name, topics_path %>
+  </li>
+</ul>
+<% end %>
+<br>
+
+<%= form_with model: @topic do |form| %>
+  <%= form.label :topicname %><br>
+  <%= form.text_field :topic_name %>
+  <%= form.submit %>
+<% end %>
+

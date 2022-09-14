@@ -31,6 +31,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :topics
+
   put "/article/:id/like", to: "likes#like"
 
 

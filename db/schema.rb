@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_09_220318) do
+ActiveRecord::Schema.define(version: 2022_09_13_141603) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -54,6 +54,12 @@ ActiveRecord::Schema.define(version: 2022_09_09_220318) do
   create_table "stripes", force: :cascade do |t|
     t.string "username"
     t.integer "amount"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.string "topic_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
