@@ -10,12 +10,14 @@ class TopicsController < ApplicationController
 
     respond_to do |format|
       if @topic.save
-        format.html { redirect_to @topic, notice: 'Topic was successfully created.' }
+        format.html { redirect_to topics_path, notice: 'Topic was successfully created.' }
         format.js
-        format.json { render json: @topic, status: :created, location: @topic }
+        # format.js {render layout: false}
+        format.json { head :no_content }
+        # format.json { render json: @topic, status: :created, location: @topic }
       else
         format.html { render action: "new" }
-        format.json { render json: @topic.errors, status: :unprocessable_entity }
+        # format.json { render json: @topic.errors, status: :unprocessable_entity }
       end
     end
   end

@@ -6,9 +6,12 @@
 <%= render @topics %>
 </ul>
 
+
+
+
 <%= form_with model: @topic do |form| %>
   <%= form.label :topicname %><br>
   <%= form.text_field :topic_name %>
-  <%= form.submit %>
+  <%= form.submit  %>
 <% end %>
 
