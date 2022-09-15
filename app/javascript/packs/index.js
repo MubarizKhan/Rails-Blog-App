@@ -1,9 +1,11 @@
 import { data } from "jquery";
 
+console.log('its not hereeeeeee')
+console.log($('.my-form'))
 
-// $(".my-form").on("submit", function(event){
-$(".topic_button").on("submit", function(event){
-
+$(".my-form").on("submit", function(event){
+// $(".topic_button").on("submit", function(event){
+   console.log('its hereeeeeee')
   var users = document.querySelector(".add_topic")
   var topic_val = users.value;
 
@@ -20,12 +22,13 @@ $(".topic_button").on("submit", function(event){
    //  accept: 'script',
   //  dataType : JSON,
    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-   data: topic_val,
+   data: { 'topic_name': topic_val },
    // body: JSON.stringify(data),
    request : data.topic_name,
 
    success: function() {
       $("#topic").append(topic_val);
+      // <%= %>
       alert(topic_val);
        alert('Yo success');
    },

@@ -9,8 +9,7 @@ class TopicsController < ApplicationController
   end
 
   def create
-    @topic = Topic.new#(topic_params)
-    @topic.save
+    @topic = Topic.create(topic_params)
     render json: @topic
     # format.js { render "create" }
   end
@@ -27,6 +26,6 @@ class TopicsController < ApplicationController
   private
 
   def topic_params
-    params.require(:topic).permit(:topic_name)
+    params.permit(:topic_name)
   end
 end
