@@ -20,7 +20,6 @@ $(".my-form").on("submit", function(event){
 
    success: function() {
       $("#topic").append(topic_val);
-      // <%= %>
       alert(topic_val);
        alert('Yo success');
    },
