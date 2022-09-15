@@ -33,6 +33,9 @@ Rails.application.routes.draw do
 
   resources :topics
 
+  # post "topics/index", to: "topics#create"
+  # post "topics/index", to: "topics#new"
+
   put "/article/:id/like", to: "likes#like"
 
 

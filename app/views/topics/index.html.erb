@@ -3,18 +3,20 @@
 
 
 <ul id="topic">
-<%= render @topics %>
+  <%= render 'topic', topics: @topics %>
 </ul>
+
+
 
 
 <%# class: "remove_user" %>
 <%# data :{topic_name :topic_name} %>
 <%# ,method::post %>
-<%= form_with model: @topic  do |form| %>
+<%= form_with model: @topic, class: 'my-form'  do |form| %>
   <%= form.label :"topic Name" %><br>
-  <%= form.text_field :topic_name, class:'add_topic', data: {tp: :topic_name }  %>
-  <%= form.submit :topic_name, :class=>"topic_button"%>
+  <%= form.text_field :topic_name, class:'add_topic', data: {tp: :topic_name }, method: :post  %>
+  <%= form.submit :topic_name, class: "topic_button", data: {tp: :topic_name }, method: :post %>
 <% end %>
 
-<%= javascript_pack_tag 'create' %>
+<%= javascript_pack_tag 'index' %>
 
