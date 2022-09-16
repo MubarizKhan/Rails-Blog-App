@@ -3,7 +3,7 @@ import { data } from "jquery";
 console.log('its not hereeeeeee')
 console.log($('.my-form'))
 
-$(".my-form").on("submit", function(event){
+$("form").on("submit", function(event){
    console.log('its hereeeeeee')
   var users = document.querySelector(".add_topic")
   var topic_val = users.value;
