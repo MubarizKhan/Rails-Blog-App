@@ -1,10 +1,9 @@
 import { data } from "jquery";
 
-console.log('its not hereeeeeee')
 console.log($('.my-form'))
 
 $("form").on("submit", function(event){
-   console.log('its hereeeeeee')
+
   var users = document.querySelector(".add_topic")
   var topic_val = users.value;
 
@@ -20,8 +19,6 @@ $("form").on("submit", function(event){
 
    success: function() {
       $("#topic").append(topic_val);
-      alert(topic_val);
-       alert('Yo success');
    },
 
   });
