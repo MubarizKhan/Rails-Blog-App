@@ -59,7 +59,16 @@ class ArticlesController < ApplicationController
   end
   # Using Strong Parameters
 
-  def archive; end
+  # def archive; end
+
+  def like
+    @article = Article.all.find(params[:id])
+    Like.create(user_id: current_user.id, article_id: @article.id)
+
+    redirect_to article_path(@article)
+
+  end
+
 
   private
 
