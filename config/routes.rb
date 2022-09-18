@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   # post "topics/index", to: "topics#create"
   # post "topics/index", to: "topics#new"
 
-  put "/article/:id/like", to: "likes#like"
+  put "/article/:id/like", to: "likes#like", as: "like"
 
 
   post "payment/invoices/new", to: "payment/invoices#new"
