@@ -24,6 +24,8 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+
+
   def update
     @article = Article.find(params[:id])
     if @article.update(article_params)
@@ -61,13 +63,18 @@ class ArticlesController < ApplicationController
 
   # def archive; end
 
-  def like
-    @article = Article.all.find(params[:id])
-    Like.create(user_id: current_user.id, article_id: @article.id)
+  # def like
+  #   @article = Article.all.find(params[:id])
+  #   # @currentUser = current_user.id
+  #   # @current_user ||= User.find_by(id: session[:user_id])
+  #   # @user = User.find(params[:id])
+  #   # @user = current_user.time_sheets
+  #   Like.create(article_id: @article.id, user_id: current_user.id)
 
-    redirect_to article_path(@article)
+    # render :show
+    # redirect_to article_path(@article)
 
-  end
+  # end
 
 
   private

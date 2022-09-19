@@ -6,20 +6,25 @@
   <li><%= link_to "Edit", edit_article_path(@article.id) %></li>
   <li><%= link_to "Destroy", article_path(@article), method: :delete, class: 'btn btn-primary', data: { confirm: 'Deseja confirmar a exclusão do post?' }  %></li>
   <li><%= link_to "Archive", archive_article_path(@article.id) %></li>
+  <%# <li>  </li> %>
 </ul>
 
+
+<%# <% end %>
 <h2>Comments</h2>
 <%= render @article.comments %>
 
+
+<%= render 'likes/form', locals: {article: @article, user_id: current_user} %>
 
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
 
 
-<%#  Go home  %>
-<%# <%= link_to "Home", article_path(@all) %> %>
 
-<%# end %>
+<%# <% end %>
+<%#  Go home  %>
+<%# <%= link_to "Home", article_path(@all) %>
 
 
 

@@ -16,7 +16,13 @@ Rails.application.routes.draw do
       get 'archive'
     end
     resources :comments
+    resources :likes,  only: [:create, :destroy]
+
   end
+
+  # resources :likes,  only: [:create, :destroy]
+
+  # post "/article/:id/like", to: "articles#like", as: "like"
 
   namespace :payment do
     resources :invoices, :stripes
@@ -36,7 +42,7 @@ Rails.application.routes.draw do
   # post "topics/index", to: "topics#create"
   # post "topics/index", to: "topics#new"
 
-  put "/article/:id/like", to: "likes#like", as: "like"
+
 
 
   post "payment/invoices/new", to: "payment/invoices#new"

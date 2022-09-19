@@ -13,10 +13,9 @@ class Article < ApplicationRecord
   validates :title, presence: true
   validates :body, presence: true, length: { minimum: 1 }
 
-  def liked?(user)
-    !!self.likes.find{|like| like.user_id == user.id}
-
-  end
+  # def liked?(user)
+  #   !!self.likes.find{|like| like.user_id == user.id}
+  # end
 
 
 end

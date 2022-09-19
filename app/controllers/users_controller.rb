@@ -5,6 +5,10 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def ret_id
+    @user = User.find(params[:id])
+  end
+
   def destroy
     @user = User.find(params[:id])
     @user.destroy
