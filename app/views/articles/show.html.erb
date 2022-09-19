@@ -9,13 +9,11 @@
   <%# <li>  </li> %>
 </ul>
 
+<%= render 'likes/form', locals: {article: @article, user_id: current_user} %>
 
 <%# <% end %>
 <h2>Comments</h2>
 <%= render @article.comments %>
-
-
-<%= render 'likes/form', locals: {article: @article, user_id: current_user} %>
 
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>

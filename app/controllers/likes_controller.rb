@@ -19,9 +19,9 @@ class LikesController < ApplicationController
   def destroy
     # @article = Article.find(params[:article_id])
     user_id = current_user.id
-    @article = Article.find(params[:article_id])
+    @article = Article.find(params[:id])
 
-    @like = Like.find(user_id: current_user.id, article_id: @article.id)
+    @like = @article.likes.find(:user_id)
     # @like = Like.find(params[:self.:id])
     @like.destroy
 

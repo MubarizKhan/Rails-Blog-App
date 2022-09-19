@@ -30,12 +30,12 @@ class CommentsController < ApplicationController
   end
 
   def update
-    # @article = Article.find(params[:id])
-    @comment = Comment.find(params[:id])
-    # @comment = @article.comments.edit(params[:comment_id])
-    # byebug
+    @article = Article.find(params[:article_id])
+    @comment = @article.comments.find(params[:id])
+
     if @comment.update(comment_params)
       flash[:notice] = 'You updated your comment!'
+      @comment.save
       redirect_to root_path
     else
       render :edit
