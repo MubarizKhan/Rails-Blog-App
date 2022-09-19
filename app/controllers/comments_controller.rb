@@ -25,8 +25,8 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    @comment = Comment.find(params[:article_id])
     @article = Article.find(params[:id])
+    @comment = @article.comments.find(params[:article_id])
   end
 
   def update
