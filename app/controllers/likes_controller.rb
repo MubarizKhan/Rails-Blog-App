@@ -7,7 +7,7 @@ class LikesController < ApplicationController
   def create
 
     @article = Article.find(params[:article_id])
-    @like = Like.create(user_id: current_user.id, article_id: @article.id)
+    @like = @article.likes.create(user_id: current_user.id, article_id: @article.id)
 
     if @like.save
       redirect_to root_path #like_index_path (@article)
@@ -20,18 +20,17 @@ class LikesController < ApplicationController
     # @article = Article.find(params[:article_id])
     user_id = current_user.id
     @article = Article.find(params[:article_id])
-    # @like = Like.find(params[:article_id, :user_id])
-
 
     @like = Like.find(user_id: current_user.id, article_id: @article.id)
+    # @like = Like.find(params[:self.:id])
     @like.destroy
 
     # redirect_to show
   end
 
   private
-  # def like_params
-  #   params.permit(:article_id, :user_id)
-  # end
+  def like_params
+    params.permit(:article_id, :user_id)
+  end
 
 end
