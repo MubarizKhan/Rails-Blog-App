@@ -21,14 +21,15 @@ class TopicsController < ApplicationController
   def update
     @topic = Topic.find(params[:id])
     if @topic.update(topic_params)
-      redirect_to :index
+      redirect_to root_path
+      # byebug
     else
       render :edit
     end
   end
 
   def new
-    @topic = Topic.new#(topic_params)
+    @topic = Topic.new(topic_params)
   end
 
   def show
