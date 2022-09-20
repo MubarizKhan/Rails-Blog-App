@@ -2,6 +2,11 @@
 
 class Article < ApplicationRecord
   # has_many :comments
+  include ActiveModel::Dirty
+
+  before_update :old_val
+  after_update :checking
+
   has_many :comments, dependent: :destroy
 
   has_many :likes, dependent: :destroy
@@ -14,9 +19,36 @@ class Article < ApplicationRecord
   validates :title, presence: true
   validates :body, presence: true, length: { minimum: 10 }
 
-  # def liked?(user)
-  #   !!self.likes.find{|like| like.user_id == user.id}
-  # end
+  def old_val
+
+      puts "-----------------------------"
+      puts "-----------BEFORE UPDATE CALLBACK------------------"
+      puts "-----------------------------"
+
+      # print title
+      print self.title_was
+      print self.title_previously_changed?
+      print self.title_previously_was
+      print self.changes
+      puts "-----------------------------"
+
+      puts "title was updated"
+
+  end
+
+
+  def checking
+    puts "-----------------------------"
+    puts "--------AFTER UPDATE CALLBACK---------------------"
+    puts "-----------------------------"
+      # print title
+      print self.title_was
+      print self.title_previously_changed?
+      print self.title_previously_was
+      print self.changes
+      puts "-----------------------------"
+
+  end
 
 
 end

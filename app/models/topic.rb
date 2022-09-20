@@ -1,5 +1,7 @@
 class Topic < ApplicationRecord
   # after_create :create_topic_status#, on: :create
+  include ActiveModel::Dirty
+
   after_commit :create_topic_status, on: :create
 
   validates :topic_name, presence: true
