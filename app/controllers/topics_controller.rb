@@ -14,6 +14,19 @@ class TopicsController < ApplicationController
     # format.js { render "create" }
   end
 
+  def edit
+    @topic = Topic.find(params[:id])
+  end
+
+  def update
+    @topic = Topic.find(params[:id])
+    if @topic.update(topic_params)
+      redirect_to :index
+    else
+      render :edit
+    end
+  end
+
   def new
     @topic = Topic.new#(topic_params)
   end

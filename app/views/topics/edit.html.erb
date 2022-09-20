@@ -1,0 +1,11 @@
+<h1> edit form </h1>
+
+<%= form_with model: @topic, class: 'my-form'  do |form| %>
+  <%= form.label :"Update topic Name" %><br>
+  <%= form.text_field :topic_name %>
+  <%= form.submit :topic_name     %>
+<% end %>
+
+
+<%# #class:'add_topic', data: {tp: :topic_name }, method: :post %>
+<%# #class: "topic_button", data: {tp: :topic_name }, method: :post %>

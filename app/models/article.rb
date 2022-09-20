@@ -12,7 +12,7 @@ class Article < ApplicationRecord
   # Additionally, it declares that the body value must be at least 10 characters long.
 
   validates :title, presence: true
-  validates :body, presence: true, length: { minimum: 1 }
+  validates :body, presence: true, length: { minimum: 10 }
 
   # def liked?(user)
   #   !!self.likes.find{|like| like.user_id == user.id}
