@@ -15,6 +15,7 @@
       <th scope="col">ID</th>
       <th scope="col">Username</th>
       <th scope="col">amount</th>
+      <th scope="col">edit</th>
     </tr>
   </thead>
 
@@ -24,6 +25,7 @@
        <td> <%= invoice.id %> </td>
        <td> <%= invoice.username %> </td>
        <td> <%= invoice.amount %> </td>
+       <td> <%= link_to "edit invoice",  payment_invoice_path(invoice), method: :patch %> </td>
     </tr>
     <% end %>
   </tbody>

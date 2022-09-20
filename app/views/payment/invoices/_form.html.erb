@@ -1,13 +1,22 @@
+ <%# @user,  %>
 <%= form_with model:@invoices do |form| %>
   <p>
     <%= form.label :username %><br>
-    <%= form.text_field :username %>
+    <%= form.text_area :username %>
   </p>
-  <p>
+
     <%= form.label :amount %><br>
     <%= form.text_area :amount %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+
+    <%= form.submit :invoice%>
+
+
+<% end %>
+<%= form_with model: @invoices do |form| %>
+  <%= form.label :"Update user Name" %><br>
+  <%= form.text_field :topic_name %>
+
+  <%= form.label :"Update amount" %><br>
+  <%= form.text_field :amount %>
+  <%= form.submit :invoice     %>
 <% end %>
