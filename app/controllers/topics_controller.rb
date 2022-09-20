@@ -9,7 +9,7 @@ class TopicsController < ApplicationController
   end
 
   def create
-    @topic = Topic.create(topic_params)
+    @topic = Topic.create(cr_topic_params)
     render json: @topic
     # format.js { render "create" }
   end
@@ -20,7 +20,7 @@ class TopicsController < ApplicationController
 
   def update
     @topic = Topic.find(params[:id])
-    if @topic.update(topic_params)
+    if @topic.update(up_topic_params)
       redirect_to root_path
       # byebug
     else
@@ -39,7 +39,12 @@ class TopicsController < ApplicationController
 
   private
 
-  def topic_params
+  def cr_topic_params
     params.permit(:topic_name)
+    # params.require(:topic).permit(:topic_name)
+  end
+
+  def up_topic_params
+    params.require(:topic).permit(:topic_name)
   end
 end

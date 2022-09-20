@@ -1,15 +1,24 @@
 class Topic < ApplicationRecord
-  after_create :create_topic_status#, on: :create
-  # after_commit :create_topic_status, on: :create
+  # after_create :create_topic_status#, on: :create
+  after_commit :create_topic_status, on: :create
   # before_save :remove_whitespaces
   validates :topic_name, presence: true
+
+  after_update :update_topic_status
   # attr_accessor :topic_name
   # after_validation :create_validated_status
+  # before_validation :b_v
 
-  def remove_whitespaces
-    # .strip!
-    # topic_status = "before validation"
-    update_column(:topic_name, topic_name.strip!)
+
+  def b_v
+    topic_status = "bv"
+    update_column(:topic_status, topic_status)
+  end
+
+  def update_topic_status
+    # puts "Topic Status Updated!"
+    topic_status = "Topic Status Updated!"
+    update_column(:topic_status, topic_status)
   end
 
   def create_topic_status

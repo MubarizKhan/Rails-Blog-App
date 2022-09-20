@@ -1,5 +1,5 @@
 <% topics.each do |topic| %>
   <%# <li><%= topic.topic_name %>
-    <li> <%= topic.topic_name %></li>
-    <li> <%= link_to "Edit form",  edit_topic_path(topic.id) %></li>
+    <li> <%= topic.topic_name %> <%= link_to "Edit form",  edit_topic_path(topic.id) %> </li>
+    <%# <li> <%= link_to "Edit form",  edit_topic_path(topic.id) %>
 <% end %>
