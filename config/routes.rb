@@ -10,14 +10,12 @@ Rails.application.routes.draw do
   # resources :articles
   # resources :comments
 
-
   resources :articles do
     member do
       get 'archive'
     end
     resources :comments
-    resources :likes,  only: [:create, :destroy]
-
+    resources :likes, only: %i[create destroy]
   end
 
   # resources :likes,  only: [:create, :destroy]
@@ -42,10 +40,7 @@ Rails.application.routes.draw do
   # post "topics/index", to: "topics#create"
   # post "topics/index", to: "topics#new"
 
-
-
-
-  post "payment/invoices/new", to: "payment/invoices#new"
+  post 'payment/invoices/new', to: 'payment/invoices#new'
   # resources :invoices
   # new_payment_invoice_path
   # post "/payment/invoices", to: "payment/invoices#new"

@@ -24,8 +24,6 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-
-
   def update
     @article = Article.find(params[:id])
     if @article.update(article_params)
@@ -71,11 +69,10 @@ class ArticlesController < ApplicationController
   #   # @user = current_user.time_sheets
   #   Like.create(article_id: @article.id, user_id: current_user.id)
 
-    # render :show
-    # redirect_to article_path(@article)
+  # render :show
+  # redirect_to article_path(@article)
 
   # end
-
 
   private
 

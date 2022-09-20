@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TopicsController < ApplicationController
   protect_from_forgery with: :null_session
   skip_before_action :verify_authenticity_token
@@ -5,7 +7,6 @@ class TopicsController < ApplicationController
   def index
     @topics = Topic.all
     @topic = Topic.new
-
   end
 
   def create

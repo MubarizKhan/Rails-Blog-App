@@ -20,35 +20,32 @@ class Article < ApplicationRecord
   validates :body, presence: true, length: { minimum: 10 }
 
   def old_val
+    puts '-----------------------------'
+    puts '-----------BEFORE UPDATE CALLBACK------------------'
+    puts '-----------------------------'
 
-      puts "-----------------------------"
-      puts "-----------BEFORE UPDATE CALLBACK------------------"
-      puts "-----------------------------"
+    # print title
+    print title_was
+    print title_previously_changed?
+    print title_previously_was
+    print changes
+    puts '-----------------------------'
 
-      # print title
-      print self.title_was
-      print self.title_previously_changed?
-      print self.title_previously_was
-      print self.changes
-      puts "-----------------------------"
-
-      puts "title was updated"
-
+    puts 'title was updated'
   end
-
 
   def checking
-    puts "-----------------------------"
-    puts "--------AFTER UPDATE CALLBACK---------------------"
-    puts "-----------------------------"
-      # print title
-      print self.title_was
-      print self.title_previously_changed?
-      print self.title_previously_was
-      print self.changes
-      puts "-----------------------------"
-
+    puts '-----------------------------'
+    puts '--------AFTER UPDATE CALLBACK---------------------'
+    # throw :abort
+    puts '-----------------------------'
+    # print title
+    print title_was
+    print title_previously_changed?
+    print title_previously_was
+    print changes
+    # print self.title.rollback!
+    print title
+    puts '-----------------------------'
   end
-
-
 end

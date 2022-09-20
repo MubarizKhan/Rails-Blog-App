@@ -1,6 +1,7 @@
-class Like < ApplicationRecord
+# frozen_string_literal: true
 
-  validates :user_id, uniqueness: {scope: :article_id}
+class Like < ApplicationRecord
+  validates :user_id, uniqueness: { scope: :article_id }
   belongs_to :user
   belongs_to :article
 end
