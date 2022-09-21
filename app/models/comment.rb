@@ -10,4 +10,5 @@ class Comment < ApplicationRecord
   # One article can have many comments.
 
   belongs_to :article
+  has_one :star, as: :starable
 end

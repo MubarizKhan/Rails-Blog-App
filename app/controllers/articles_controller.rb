@@ -39,6 +39,7 @@ class ArticlesController < ApplicationController
   #  The title and body here are dummy values. After we create the form, we will come back and change these.
 
   def create
+    # @article.paragraph.name =  ">"
     @article = Article.new(article_params)
     if @article.save
       redirect_to @article

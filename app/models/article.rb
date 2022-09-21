@@ -6,6 +6,7 @@ class Article < ApplicationRecord
 
   before_update :old_val
   after_update :checking
+  # after_create :pre_creat
 
   has_many :comments, dependent: :destroy
 
@@ -22,6 +23,7 @@ class Article < ApplicationRecord
   validates :title, presence: true
   validates :body, presence: true, length: { minimum: 10 }
 
+  has_one :star, as: :starable
 
 
 
@@ -29,8 +31,12 @@ class Article < ApplicationRecord
 
 
 
+  # def pre_creat
+  #   puts"------------HELLOOOOO----------------"
+  #   paragraphs.name = "Newly_created"
+  #   puts"----------------------------------------"
 
-
+  # end
 
 
 

@@ -20,6 +20,14 @@
 <h2>Comments</h2>
 <%= render @article.comments %>
 
+<h3> Stars </h3>
+<%# <% @articles.each do |article|%>
+  <% if @article.star %>
+  <p> Star's user id is <%= @article.star.user_id %> </p>
+  <% else %>
+  <p> <%= print "No star at the moment" %></p>
+  <% end %>
+
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
 

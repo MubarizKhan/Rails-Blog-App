@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_21_084630) do
+ActiveRecord::Schema.define(version: 2022_09_21_103640) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -61,6 +61,15 @@ ActiveRecord::Schema.define(version: 2022_09_21_084630) do
     t.index ["article_id"], name: "index_sections_on_article_id"
   end
 
+  create_table "stars", force: :cascade do |t|
+    t.string "starable_type"
+    t.integer "starable_id"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_stars_on_user_id"
+  end
+
   create_table "stripes", force: :cascade do |t|
     t.string "username"
     t.integer "amount"
@@ -92,4 +101,5 @@ ActiveRecord::Schema.define(version: 2022_09_21_084630) do
   add_foreign_key "likes", "users"
   add_foreign_key "paragraphs", "sections"
   add_foreign_key "sections", "articles"
+  add_foreign_key "stars", "users"
 end
