@@ -11,6 +11,9 @@ class Article < ApplicationRecord
 
   has_many :likes, dependent: :destroy
   validates_associated :likes, :comments
+
+  has_many :sections
+  has_many :paragraphs, through: :sections
   # The first validation declares that a title value must be present.
   # Because title is a string, this means that the title value must contain at least one non-whitespace character.
   # The second validation declares that a body value must also be present.
@@ -18,6 +21,20 @@ class Article < ApplicationRecord
 
   validates :title, presence: true
   validates :body, presence: true, length: { minimum: 10 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   def old_val
     puts '-----------------------------'

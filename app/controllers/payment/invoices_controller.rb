@@ -44,6 +44,10 @@ module Payment
       end
     end
 
+    def invest
+
+    end
+
     private
 
     def invoice_params

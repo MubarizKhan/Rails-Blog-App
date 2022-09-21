@@ -41,6 +41,8 @@ Rails.application.routes.draw do
   # post "topics/index", to: "topics#new"
 
   post 'payment/invoices/new', to: 'payment/invoices#new'
+
+  get 'payment/invoice/invest', to: 'payment/invoices#invest'
   # resources :invoices
   # new_payment_invoice_path
   # post "/payment/invoices", to: "payment/invoices#new"
