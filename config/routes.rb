@@ -2,7 +2,9 @@
 
 Rails.application.routes.draw do
   devise_for :users
-
+  # do
+    # resources :star, only: %i[show], module: :users
+  # end
   # delete "users/sign_out", to "devise/sessions#destroy"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'articles#index'
@@ -14,12 +16,15 @@ Rails.application.routes.draw do
     member do
       get 'archive'
     end
-    resources :comments
+    resources :comments do
+      resources :star, only: %i[create destroy], module: :comments
+    end
     resources :likes, only: %i[create destroy]
+    resources :star, only: %i[create destroy], module: :articles
   end
 
   # resources :likes,  only: [:create, :destroy]
-
+  # resources :star, only: %i[create destroy]
   # post "/article/:id/like", to: "articles#like", as: "like"
 
   namespace :payment do

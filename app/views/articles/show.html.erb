@@ -28,6 +28,9 @@
   <p> <%= print "No star at the moment" %></p>
   <% end %>
 
+<%# <%= link_to "Archive", archive_article_path(@article.id) %> %>
+<%= render 'stars/star', locals: {starable: @article}%>
+
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
 

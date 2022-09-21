@@ -1,0 +1,10 @@
+
+
+<h2> Hi in star partial form  </h2>
+
+<%= form_with model: @star do |f|%>
+  <%= f.hidden_field :starable_type, value: "Article"  %>
+  <%= f.hidden_field :user_id, value: current_user.id  %>
+      <%= f.submit class:'btn btn-secondary' %>
+<% end%>
+
