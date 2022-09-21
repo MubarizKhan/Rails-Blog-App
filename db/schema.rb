@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_18_115436) do
+ActiveRecord::Schema.define(version: 2022_09_21_084630) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -45,9 +45,32 @@ ActiveRecord::Schema.define(version: 2022_09_18_115436) do
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
+  create_table "paragraphs", force: :cascade do |t|
+    t.string "name"
+    t.integer "section_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["section_id"], name: "index_paragraphs_on_section_id"
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.string "name"
+    t.integer "article_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["article_id"], name: "index_sections_on_article_id"
+  end
+
   create_table "stripes", force: :cascade do |t|
     t.string "username"
     t.integer "amount"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.string "topic_name"
+    t.string "topic_status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -67,4 +90,6 @@ ActiveRecord::Schema.define(version: 2022_09_18_115436) do
   add_foreign_key "comments", "articles"
   add_foreign_key "likes", "articles"
   add_foreign_key "likes", "users"
+  add_foreign_key "paragraphs", "sections"
+  add_foreign_key "sections", "articles"
 end
