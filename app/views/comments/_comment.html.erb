@@ -1,3 +1,4 @@
+
 <p>
   <%= comment.id%>
   <strong>Commenter:</strong>
@@ -6,9 +7,14 @@
 
 <p>
   <strong>Comment: </strong>
+  <%# <h1> this is body </h1> %>
+
   <%= comment.body %>
 </p>
 
 <ul>
 <li><%= link_to "edit article comment",  edit_article_comment_path(comment.id) %></li>
+<%# <li> </li> %>
 </ul>
+<p> Like this comment? star it </p>
+<%= render partial:'stars/star', locals: {starable: comment} %>

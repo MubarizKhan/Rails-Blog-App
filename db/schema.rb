@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_21_181716) do
+ActiveRecord::Schema.define(version: 2022_09_22_083340) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -68,7 +68,6 @@ ActiveRecord::Schema.define(version: 2022_09_21_181716) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index "\"user_id\", \"starable_id\", \"_starable_type\"", name: "index_stars_on_user_id_and_starable_id_and__starable_type", unique: true
-    t.index ["starable_id", "starable_type"], name: "index_stars_on_starable_id_and_starable_type"
   end
 
   create_table "stripes", force: :cascade do |t|

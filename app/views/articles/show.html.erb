@@ -18,29 +18,15 @@
 
 <%# <% end %>
 <h2>Comments</h2>
+
 <%= render @article.comments %>
 
 <h3> Stars </h3>
 
 
+<%= render partial:'stars/star', locals: {starable: @article} %>
 
-<%= @article.stars.count%>
-<% star = @article.stars.find_by(starable: @article) %>
-<% if star.nil? %>
-      <form action =" <%=  stars_path(@article) %> " method="post">
-          <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
-          <input type="hidden" name="star[starable_id]" value="<%= @article.id %>">
-          <input type="hidden" name="star[starable_type]" value="<%= "Article" %>">
-          <input type="submit" value="star">
-      </form>
 
-<% else %>
-      <form action ="<%= star_path(star) %>" method="post">
-          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
-          <input type="hidden" name="_method" value="DELETE" >
-
-          <input type="submit" value="star">
-      </form>
 
 
 
@@ -49,10 +35,7 @@
 <%= render 'comments/form' %>
 
 
-<%end%>
-<%# <% end %>
-<%#  Go home  %>
-<%# <%= link_to "Home", article_path(@all) %>
+
 
 
 

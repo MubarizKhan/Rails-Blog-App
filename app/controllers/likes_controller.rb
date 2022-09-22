@@ -17,20 +17,17 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    # @article = Article.find(params[:article_id])
-    user_id = current_user.id
-    @article = Article.find(params[:id])
 
-    @like = @article.likes.find(user_id)
-    # @like = Like.find(params[:self.:id])
+    @like = current_user.likes.find(params[:article_id])
+    @article = @like.article
     @like.destroy
 
-    # redirect_to show
+    redirect_to root_path
   end
 
   private
 
   def like_params
-    params.permit(:article_id, :user_id)
+    params.require(:like).permit(:article_id)
   end
 end

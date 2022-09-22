@@ -11,7 +11,8 @@ class StarsController < ApplicationController
     if !@star.save
       redirect_to root_path
     end
-    redirect_to @star.starable
+    # s = current_user.stars.find(params[:id])
+    redirect_to root_path #@star.starable
     # byebug
   end
 
@@ -19,7 +20,7 @@ class StarsController < ApplicationController
     @star = current_user.stars.find(params[:id])
     @starable = @star.starable
     @star.destroy
-    redirect_to root_path
+    # redirect_to root_path
 
   end
 

@@ -1,29 +1,23 @@
 
 
-<h2> Hi in star partial form  </h2>
 
+<%= starable.stars.count%>
+<% star = current_user.stars.find_by(starable: starable) %>
+  <% if star.nil? %>
+    <form action =" <%=  stars_path(starable) %>" method="post">
+      <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+      <input type="hidden" name="star[starable_id]" value="<%= starable.id %>">
+      <input type="hidden" name="star[starable_type]" value="<%= starable.class.to_s %>">
+      <input type="submit" value="star">
+    </form>
+  <% else %>
+    <form action ="<%= star_path(star) %>" method="post">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+      <input type="hidden" name="_method" value="DELETE" >
+      <input type="submit" value="unstar">
+    </form>
 
-<h2> <%= starable %> </h2>
-
-<h2> <%= Star.new %> </h2>
-
-<%# [ @article, @article.comments.build ] %>
-
-
-
-
-
-
-<%# <% end %>
-<%# <%= form_with model: @article do |f| %> %>
-<%= form_with do |f| %>
-  <div class="form-group">
-    <%= f.hidden_field :starable%>
-
-    <%# <%= f.hidden_field :current_user.id%> %>
-  </div>
-  <%= f.submit class: "btn btn-primary" %>
-<% end %>
+  <%end%>
 
 
 
