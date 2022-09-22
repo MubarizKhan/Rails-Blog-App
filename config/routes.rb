@@ -17,11 +17,12 @@ Rails.application.routes.draw do
       get 'archive'
     end
     resources :comments do
-      resources :star, only: %i[create destroy], module: :comments
+      # resources :star, only: %i[create destroy], module: :comments
     end
     resources :likes, only: %i[create destroy]
-    resources :star, only: %i[create destroy], module: :articles
   end
+
+  resources :stars
 
   # resources :likes,  only: [:create, :destroy]
   # resources :star, only: %i[create destroy]
@@ -43,6 +44,7 @@ Rails.application.routes.draw do
   resources :topics
 
   # post "topics/index", to: "topics#create"
+  # post "/articles/:id/star", to: "star#create"
   # post "topics/index", to: "topics#new"
 
   post 'payment/invoices/new', to: 'payment/invoices#new'

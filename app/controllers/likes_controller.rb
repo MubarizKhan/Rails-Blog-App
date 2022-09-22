@@ -21,7 +21,7 @@ class LikesController < ApplicationController
     user_id = current_user.id
     @article = Article.find(params[:id])
 
-    @like = @article.likes.find(:user_id)
+    @like = @article.likes.find(user_id)
     # @like = Like.find(params[:self.:id])
     @like.destroy
 

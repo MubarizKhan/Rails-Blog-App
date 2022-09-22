@@ -11,9 +11,9 @@
       </form>
 
       <% else %>
-      <form action ="<%= article_like_path(@article) %>" method="DELETE">
+      <form action ="<%= article_like_path(like) %>" method="post">
           <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
-          <input type="hidden" name="_method" value="<%= @article.id %>">
+          <input type="hidden" name="_method" value="DELETE">
           <input type="submit" value="UNLike To fixx">
       </form>
 

@@ -2,9 +2,29 @@
 
 <h2> Hi in star partial form  </h2>
 
-<%= form_with model: @star do |f|%>
-  <%= f.hidden_field :starable_type, value: "Article"  %>
-  <%= f.hidden_field :user_id, value: current_user.id  %>
-      <%= f.submit class:'btn btn-secondary' %>
-<% end%>
+
+<h2> <%= starable %> </h2>
+
+<h2> <%= Star.new %> </h2>
+
+<%# [ @article, @article.comments.build ] %>
+
+
+
+
+
+
+<%# <% end %>
+<%# <%= form_with model: @article do |f| %> %>
+<%= form_with do |f| %>
+  <div class="form-group">
+    <%= f.hidden_field :starable%>
+
+    <%# <%= f.hidden_field :current_user.id%> %>
+  </div>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
+
+
+
 

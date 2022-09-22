@@ -13,7 +13,7 @@
 
 <h3> Stars </h3>
 <% @articles.each do |article|%>
-  <%= article.star %>
+  <%= link_to article.stars, article %>
 <% end%>
 
 </ul>

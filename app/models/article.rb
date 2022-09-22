@@ -23,7 +23,7 @@ class Article < ApplicationRecord
   validates :title, presence: true
   validates :body, presence: true, length: { minimum: 10 }
 
-  has_one :star, as: :starable
+  has_many :stars, as: :starable
 
 
 
