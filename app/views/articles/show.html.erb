@@ -5,7 +5,8 @@
 <% @article.title  %>
 <%# <% @article.save%>
 <%# <h1><%= @article.title_was? %>
-
+<p> Like this article, star it? </p>
+<%= render partial:'stars/star', locals: {starable: @article} %>
 
 <ul>
   <li><%= link_to "Edit", edit_article_path(@article.id) %></li>
@@ -21,10 +22,9 @@
 
 <%= render @article.comments %>
 
-<h3> Stars </h3>
 
 
-<%= render partial:'stars/star', locals: {starable: @article} %>
+
 
 
 
