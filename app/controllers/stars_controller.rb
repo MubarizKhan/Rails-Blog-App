@@ -11,6 +11,7 @@ class StarsController < ApplicationController
     @star.starable_type
     if !@star.save
       redirect_to root_path
+
     end
 
   end
