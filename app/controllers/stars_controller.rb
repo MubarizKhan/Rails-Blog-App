@@ -8,20 +8,17 @@ class StarsController < ApplicationController
     @star = current_user.stars.new(star_params)
 
     # @star.user_id = current_user.id
+    @star.starable_type
     if !@star.save
       redirect_to root_path
     end
-    # s = current_user.stars.find(params[:id])
-    redirect_to root_path #@star.starable
-    # byebug
+
   end
 
   def destroy
     @star = current_user.stars.find(params[:id])
     @starable = @star.starable
     @star.destroy
-    # redirect_to root_path
-
   end
 
   # byebug
