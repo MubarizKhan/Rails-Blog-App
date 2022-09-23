@@ -6,6 +6,16 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
     @t3 = Article.joins(:comments).group("article_id").count
+
+    # Article.where(id: 1).or(Article.where(id:2))
+    # Article.order(created_at: :desc)
+    # Article.select(:title)
+    # Article.select(:title).distinct
+    # Article.limit(1)
+    # Article.group(:title).count
+
+
+
   end
 
   def show

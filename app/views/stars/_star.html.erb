@@ -1,16 +1,15 @@
 
 
 
-<%= starable.stars.count%>
-<% star = current_user.stars.find_by(starable: starable) %>
-  <% if star.nil? %>
-    <form action =" <%=  stars_path(starable) %>" method="post">
-      <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
-      <input type="hidden" name="star[starable_id]" value="<%= starable.id %>">
-      <input type="hidden" name="star[starable_type]" value="<%= starable.class.to_s %>">
-      <input type="submit" value="star">
-    </form>
-  <% else %>
+  <%= starable.stars.count%>
+    <% star = current_user.stars.find_by(starable: starable)%>
+    <% if star.nil? %>
+      <form>
+        <% star = current_user.stars.find_or_create_by(starable: starable) %>
+        <input type="submit" value="star">
+      </form>
+
+    <% else %>
     <form action ="<%= star_path(star) %>" method="post">
       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
       <input type="hidden" name="_method" value="DELETE" >
