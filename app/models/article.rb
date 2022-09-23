@@ -25,22 +25,12 @@ class Article < ApplicationRecord
 
   has_many :stars, as: :starable
 
-
-
-
-
-
-
   # def pre_creat
   #   puts"------------HELLOOOOO----------------"
   #   paragraphs.name = "Newly_created"
   #   puts"----------------------------------------"
 
   # end
-
-
-
-
 
   def old_val
     puts '-----------------------------'

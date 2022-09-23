@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 class Section < ApplicationRecord
   belongs_to :article
   has_many :paragraphs
 end
-
 
 # class Document < ApplicationRecord
 #   has_many :sections

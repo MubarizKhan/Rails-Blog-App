@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class StarsController < ApplicationController
   before_action :authenticate_user!
 
@@ -9,11 +11,7 @@ class StarsController < ApplicationController
 
     # @star.user_id = current_user.id
     @star.starable_type
-    if !@star.save
-      redirect_to root_path
-
-    end
-
+    redirect_to root_path unless @star.save
   end
 
   def destroy
@@ -25,6 +23,7 @@ class StarsController < ApplicationController
   # byebug
 
   private
+
   def star_params
     params.require(:star).permit(:starable_id, :starable_type)
   end

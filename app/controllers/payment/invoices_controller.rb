@@ -15,7 +15,7 @@ module Payment
     end
 
     def new
-      @invoice = Invoice.new#(invoice_params)
+      @invoice = Invoice.new # (invoice_params)
       # @invoice.save
 
       # @invoice.save
@@ -44,9 +44,7 @@ module Payment
       end
     end
 
-    def invest
-
-    end
+    def invest; end
 
     private
 

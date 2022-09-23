@@ -17,7 +17,6 @@ class LikesController < ApplicationController
   end
 
   def destroy
-
     @like = current_user.likes.find(params[:article_id])
     @article = @like.article
     @like.destroy
