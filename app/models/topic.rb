@@ -10,7 +10,6 @@ class Topic < ApplicationRecord
 
   after_update :update_topic_status
 
-
   def update_topic_status
     # puts "Topic Status Updated!"
     topic_status = 'Topic Status Updated!'
@@ -22,9 +21,7 @@ class Topic < ApplicationRecord
     update_column(:topic_status, topic_status)
   end
 
-  scope :after_updation, -> { where(topic_status: 'Topic Status Updated!')}
+  scope :after_updation, -> { where(topic_status: 'Topic Status Updated!') }
 
   # def index
-
-
 end

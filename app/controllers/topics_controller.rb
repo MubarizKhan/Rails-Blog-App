@@ -7,17 +7,15 @@ class TopicsController < ApplicationController
   def index
     # @topics = Topic.all
     @topic = Topic.new
-    @t1 = Topic.where(topic_name: "2nd")
+    @t1 = Topic.where(topic_name: '2nd')
     @t2 = Topic.pluck(:topic_name)
 
-    if params[:after_updation] == 'Topic Status Updated!'
-      @topics = Topic.after_updation.all
-    else
-      @topics = Topic.all
-    end
-  # end
-
-
+    @topics = if params[:after_updation] == 'Topic Status Updated!'
+                Topic.after_updation.all
+              else
+                Topic.all
+              end
+    # end
   end
 
   def create
