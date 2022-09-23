@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+    @t3 = Article.joins(:comments).group("article_id").count
   end
 
   def show

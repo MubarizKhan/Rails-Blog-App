@@ -6,10 +6,11 @@
     <%= link_to article.title, article %>
     <%# <%= link_to "Destroy", article_path(article), method: :delete, data: { confirm: "Are you sure?" } %>
   </li>
-    <%# <li></li> %>
-
-
   <% end %>
+
+
+<p> Each numbered article has this many comments <%= @t3 %> </p>
+
 
 <h3> Stars </h3>
 <% @articles.each do |article|%>

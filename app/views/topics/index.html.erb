@@ -1,11 +1,15 @@
 <b>Topics</b>
 
 
-
+<p> Active Record Queries </p>
 <ul id="topic">
   <%= render 'topic', topics: @topics %>
+  <%= @t1 %>
+  <%= @t2 %>
+
 
 </ul>
+
 
 
 <%= form_with model: @topic, class: 'my-form'  do |form| %>

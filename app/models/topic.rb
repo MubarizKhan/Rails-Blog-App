@@ -10,10 +10,6 @@ class Topic < ApplicationRecord
 
   after_update :update_topic_status
 
-  # def b_v
-  #   topic_status = "bv"
-  #   update_column(:topic_status, topic_status)
-  # end
 
   def update_topic_status
     # puts "Topic Status Updated!"
@@ -26,8 +22,5 @@ class Topic < ApplicationRecord
     update_column(:topic_status, topic_status)
   end
 
-  # def create_validated_status
-  #   topic_status = "Newly_Validated!"
-  #   update_column(:topic_status, topic_status)
-  # end
+
 end

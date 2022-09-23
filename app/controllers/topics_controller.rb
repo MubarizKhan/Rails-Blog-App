@@ -7,6 +7,10 @@ class TopicsController < ApplicationController
   def index
     @topics = Topic.all
     @topic = Topic.new
+    @t1 = Topic.where(topic_name: "2nd")
+    @t2 = Topic.pluck(:topic_name)
+
+
   end
 
   def create
