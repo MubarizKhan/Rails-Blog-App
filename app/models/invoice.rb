@@ -13,4 +13,4 @@ class Invoice < ApplicationRecord
 #   end
 
 #   scope :cheap, lesser_than(1000)
-# end
+end
