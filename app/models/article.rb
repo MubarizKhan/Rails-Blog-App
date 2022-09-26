@@ -32,6 +32,9 @@ class Article < ApplicationRecord
 
   # end
 
+  scope :greater_than_one, -> {where('id > 1')}
+  scope :specific_article, ->(para) {where("title = ?", para)}
+
   def old_val
     puts '-----------------------------'
     puts '-----------BEFORE UPDATE CALLBACK------------------'
