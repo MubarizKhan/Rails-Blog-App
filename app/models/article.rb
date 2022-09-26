@@ -4,6 +4,9 @@ class Article < ApplicationRecord
   # has_many :comments
   include ActiveModel::Dirty
 
+  # enum: status, [:shipped, :being_packaged, :complete, :cancelled, :randomlll, :checkchecl]
+  enum :title, [:shipped, :being_packaged, :complete, :cancelled]
+# end
   before_update :old_val
   after_update :checking
   # after_create :pre_creat
@@ -36,6 +39,8 @@ class Article < ApplicationRecord
   scope :specific_article, ->(para) {where("title = ?", para)}
 
   scope :created_before, ->(time) { where("created_at < ?", time) if time.present? }
+
+
 
   def old_val
     puts '-----------------------------'
