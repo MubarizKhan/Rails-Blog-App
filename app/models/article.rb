@@ -35,6 +35,8 @@ class Article < ApplicationRecord
   scope :greater_than_one, -> {where('id > 1')}
   scope :specific_article, ->(para) {where("title = ?", para)}
 
+  scope :created_before, ->(time) { where("created_at < ?", time) if time.present? }
+
   def old_val
     puts '-----------------------------'
     puts '-----------BEFORE UPDATE CALLBACK------------------'

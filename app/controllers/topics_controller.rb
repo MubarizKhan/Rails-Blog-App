@@ -5,16 +5,16 @@ class TopicsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    # @topics = Topic.all
+    @topics = Topic.all
     @topic = Topic.new
     @t1 = Topic.where(topic_name: '2nd')
     @t2 = Topic.pluck(:topic_name)
 
-    @topics = if params[:after_updation] == 'Topic Status Updated!'
-                Topic.after_updation.all
-              else
-                Topic.all
-              end
+    # @topics = if params[:after_updation] == 'Topic Status Updated!'
+    #             Topic.after_updation.all
+    #           else
+    #             Topic.all
+    #           end
     # end
   end
 
