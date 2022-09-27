@@ -5,7 +5,8 @@ class Article < ApplicationRecord
   include ActiveModel::Dirty
 
   # enum: status, [:shipped, :being_packaged, :complete, :cancelled, :randomlll, :checkchecl]
-  enum :title, [:shipped, :being_packaged, :complete, :cancelled]
+  # enum :id, [:shipped, :being_packaged, :complete, :cancelled]
+  # enum :id, { draft: 4, published: 1, archived: 2, trashed: 3 }
 # end
   before_update :old_val
   after_update :checking
