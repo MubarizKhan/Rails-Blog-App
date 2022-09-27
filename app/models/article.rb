@@ -7,7 +7,7 @@ class Article < ApplicationRecord
   # enum: status, [:shipped, :being_packaged, :complete, :cancelled, :randomlll, :checkchecl]
   # enum :id, [:shipped, :being_packaged, :complete, :cancelled]
   # enum :id, { draft: 4, published: 1, archived: 2, trashed: 3 }
-# end
+  # end
   before_update :old_val
   after_update :checking
   # after_create :pre_creat
@@ -36,12 +36,10 @@ class Article < ApplicationRecord
 
   # end
 
-  scope :greater_than_one, -> {where('id > 1')}
-  scope :specific_article, ->(para) {where("title = ?", para)}
+  scope :greater_than_one, -> { where('id > 1') }
+  scope :specific_article, ->(para) { where('title = ?', para) }
 
-  scope :created_before, ->(time) { where("created_at < ?", time) if time.present? }
-
-
+  scope :created_before, ->(time) { where('created_at < ?', time) if time.present? }
 
   def old_val
     puts '-----------------------------'

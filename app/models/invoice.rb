@@ -6,11 +6,11 @@ class Invoice < ApplicationRecord
   # scope :cheap, -> {
   #   where(:cheap => true)
   # }
-#   scope :cheap, -> { where(cheap: true) }
+  #   scope :cheap, -> { where(cheap: true) }
 
-#   def self.lesser_than(amount)
-#     where('price < ?', amount)
-#   end
+  #   def self.lesser_than(amount)
+  #     where('price < ?', amount)
+  #   end
 
-#   scope :cheap, lesser_than(1000)
+  #   scope :cheap, lesser_than(1000)
 end
