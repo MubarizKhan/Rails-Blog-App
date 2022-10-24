@@ -23,9 +23,11 @@ Things you may want to cover:
 
 * Resources used to Learn Rails and make this project
 
-[200~
+
+
+
 =================================================================================
-HTTP Transfer 
+HTTP Transfer
 
 https://silo.tips/download/web-application-development-2
 =================================================================================
@@ -53,7 +55,11 @@ Rails bundler, Gems
 
 http://railscasts.com/episodes/201-bundler-revised?autoplay=true
 
+https://www.rubyguides.com/2018/09/ruby-gems-gemfiles-bundler/
+
 https://www.youtube.com/watch?v=ZE-8rqPI3B4
+
+https://stackoverflow.com/questions/6927442/what-is-the-difference-between-gemfile-and-gemfile-lock-in-ruby-on-rails
 
 
 ==================================================================================
@@ -68,15 +74,18 @@ https://guides.railsgirls.com/app
 https://levelup.gitconnected.com/devise-authentication-with-rails-5-815b5a9d6daf
 ==================================================================================
 
-Serializer 
+
+Serializer
 
 https://www.educative.io/answers/what-are-serializers-in-ror
+
+https://medium.com/@maxfpowell/a-quick-intro-to-rails-serializers-b390ced1fce7
 
 https://medium.com/@benarondavis/using-rails-serializers-and-controllers-together-58d536a39cfe
 
 
 ====================================================================================
-NESTED RESOURCES 
+NESTED RESOURCES
 
 https://www.digitalocean.com/community/tutorials/how-to-create-nested-resources-for-a-ruby-on-rails-application
 
@@ -107,6 +116,8 @@ https://stackoverflow.com/questions/3029954/difference-between-scope-and-namespa
 Members Vs collections
 
 https://tadhao.medium.com/member-vs-collection-in-rails-routes-ade10c8c5d19
+
+https://stackoverflow.com/questions/3028653/difference-between-collection-route-and-member-route-in-ruby-on-rails
 ====================================================================
 
 Routing with Restful design
@@ -137,11 +148,23 @@ https://www.botreetechnologies.com/blog/introducing-jquery-in-rails-6-using-webp
 https://thoughtbot.com/blog/back-to-basics-http-requests
 
 ===================================================
+
  RAILS filters
+
 https://www.javatpoint.com/ruby-on-rails-filters
-
-
 https://guides.rubyonrails.org/command_line.html
+
+Around_action filter
+
+https://stackoverflow.com/questions/36143039/rails-around-action-in-the-callback-stack
+
+Controller Filters Vs Callbacks
+
+https://stackoverflow.com/questions/29841133/callbacks-and-filters-in-ruby-on-rails-4-01
+
+
+
+
 =======================================
 commandline
 
@@ -167,7 +190,7 @@ Seeding DB
 
 https://ninjadevel.com/seeding-database-ruby-on-rails/
 
-https://medium.com/@SJTGs/seeding-in-rails-ff6b4e35941b	
+https://medium.com/@SJTGs/seeding-in-rails-ff6b4e35941b
 
 =============================================================================
 
@@ -177,7 +200,7 @@ https://medium.com/@michellekwong2/form-tag-vs-form-for-vs-form-with-fa6e0ac73aa
 
 =====================================================================================
 
-HOW TO USE PARTIAL FILES 
+HOW TO USE PARTIAL FILES
 
 https://gorails.com/blog/how-to-use-partials-in-rails
 
@@ -187,13 +210,14 @@ Listing all controllers with devise
 
 https://wajeeh-ahsan.medium.com/list-all-users-and-user-profile-with-devise-in-rails-d5e563bb1e48
 
-=========================================================
-
-Remote form submission Ajax
-
-https://dev.to/shehrozirfan/remote-form-submission-and-ajax-in-rails-15e6
 
 =======================================
+
+Delete a record from console -- Ruby on Rails
+
+https://stackoverflow.com/questions/7069221/delete-a-record-from-console-ruby-on-rails
+
+==============================================================================
 
 conditionally display a partial
 
@@ -221,8 +245,12 @@ https://www.rubyguides.com/2019/03/rails-ajax/
 
 https://www.mintbit.com/blog/implementing-ajax-in-ruby-on-rails
 
+https://dev.to/shehrozirfan/remote-form-submission-and-ajax-in-rails-15e6
+
+https://tadhao.medium.com/rails-way-of-ajax-with-remote-true-7427089a2a57
 
 
+================================================================
 
 
  Remote form submissions
@@ -231,13 +259,12 @@ https://www.mintbit.com/blog/implementing-ajax-in-ruby-on-rails
 
  https://tadhao.medium.com/rails-way-of-ajax-with-remote-true-7427089a2a57
 
- =======================================
+=========================================================
 
-Delete a record from console -- Ruby on Rails
+Remote form submission Ajax
 
-https://stackoverflow.com/questions/7069221/delete-a-record-from-console-ruby-on-rails
-
-================================================================
+https://dev.to/shehrozirfan/remote-form-submission-and-ajax-in-rails-15e6
+https://tadhao.medium.com/rails-way-of-ajax-with-remote-true-7427089a2a57
 
 JQuery AJax Rails
 
@@ -245,6 +272,7 @@ https://stackoverflow.com/questions/53056476/submit-rails-form-via-ajax-request-
 
 https://stackoverflow.com/questions/8567114/how-can-i-make-an-ajax-call-without-jquery?rq=1
 
+https://stackoverflow.com/questions/38706639/submit-edited-comment-in-same-place-with-ajax-jquery-in-rails
 
 
 https://stackoverflow.com/questions/58029765/rails-5-ajax-form-submit-form-on-clicking-one-of-the-2-radio-buttons-in-ajax
@@ -268,10 +296,15 @@ likees -- count, liked by user id
 
 =====================================================
 
-TOP Active Record 
+TOP Active Record
 
 https://www.theodinproject.com/lessons/ruby-on-rails-active-record-basics
 https://www.theodinproject.com/lessons/ruby-on-rails-active-record-queries
+
+
+N+1 problem and eager loading
+
+https://www.youtube.com/watch?v=wLMRzdOztUY
 
 
 
@@ -307,7 +340,7 @@ https://stackoverflow.com/questions/19105711/error-migrations-are-pending-run-ra
 
 UP Vs Down
 
- 
+
 https://www.rubyinrails.com/2014/05/14/rails-migration-change-vs-up-down-methods/
 
 
@@ -318,7 +351,7 @@ https://www.rubyinrails.com/2014/05/14/rails-migration-change-vs-up-down-methods
 
 =====================================================
 
-Indexing 
+Indexing
 
 https://medium.com/@mera.stackhouse/what-are-indexes-and-how-to-add-them-to-your-rails-app-dc066d538771
 
@@ -345,7 +378,7 @@ https://westonganger.com/posts/check-if-particular-attribute-has-changed-in-a-ca
 https://stackoverflow.com/questions/24314584/run-a-callback-only-if-an-attribute-has-changed-in-rails
 
 =========================================================
-Understanding DB transacions 
+Understanding DB transacions
 
 https://www.honeybadger.io/blog/database-transactions-rails-activerecord/
 
@@ -358,7 +391,7 @@ https://guides.rubyonrails.org/active_record_basics.html
 
 
 =========================================================
-DIRTY 
+DIRTY
 
 https://cek.io/blog/2014/05/21/dirty-checking/
 https://medium.com/@katedoesdev/dirty-magic-42cae6cccda5
@@ -368,8 +401,10 @@ https://medium.com/@katedoesdev/dirty-magic-42cae6cccda5
 Callbacks
 
 https://api.rubyonrails.org/v6.1/classes/ActiveRecord/Callbacks.html
+
 https://guides.rubyonrails.org/active_record_callbacks.html#halting-execution
 
+https://web-crunch.com/posts/understanding-active-record-callbacks
 
 =========================================================
 CHEATSHEETS
@@ -421,11 +456,21 @@ Scopes
 https://guides.rubyonrails.org/active_record_querying.html#scopes
 
 ====================================================================================================
+RAILS CONVENTIONS AND BEST PRACTICES
 
+https://www.railscarma.com/blog/technical-articles/rails-development-coding-conventions-best-practices/
 
 ====================================================================================================
+Design Patterns
 
+===> Keep it simple, stupid
+	 https://www.freecodecamp.org/news/keep-it-simple-stupid-how-to-use-the-kiss-principle-in-design/
 
+===> SOLID
+ 	https://www.freecodecamp.org/news/solid-principles-single-responsibility-principle-explained/
+
+===> Why Learn Design Patterns
+	https://refactoring.guru/design-patterns/why-learn-patterns
 ==============================================================================================
 
 
@@ -451,7 +496,7 @@ https://guides.rubyonrails.org/active_record_querying.html#scopes
 
 
 ===============================================================================================
-Destroy vs Delete Rails 
+Destroy vs Delete Rails
 
 https://stackoverflow.com/questions/22757450/difference-between-destroy-and-delete
 
@@ -476,6 +521,9 @@ where.not
 https://www.bigbinary.com/blog/rails-6-deprecates-where-not-working-as-nor-and-will-change-to-nand-in-rails-6-1
 
 ===============================================================================================
+deleting migrations
+
+https://stackoverflow.com/questions/3872586/how-to-delete-migration-files-in-rails-3
 
 ===============================================================================================
 
@@ -508,7 +556,16 @@ Article.select('articles.id').joins(:comments).where('comments.created_at > ?', 
 ENUMS
 https://blog.saeloun.com/2022/01/05/how-to-use-enums-in-rails.html
 
-==================================================================
+
+https://api.rubyonrails.org/v5.1/classes/ActiveRecord/Enum.html
+
+https://naturaily.com/blog/ruby-on-rails-enum
+
+https://stackoverflow.com/questions/42313590/argumenterror-when-using-enum
+
+https://www.reddit.com/r/rails/comments/lyvtbi/why_do_i_get_wrong_number_of_arguments_if_i_dont/
+
+===========================================================
 
 Difference between Models and databases
 
@@ -516,16 +573,218 @@ https://stackoverflow.com/questions/70407212/rails-are-the-model-and-database-th
 
 ==================================================================
 
-Controller Filters Vs Callbacks
 
-https://stackoverflow.com/questions/29841133/callbacks-and-filters-in-ruby-on-rails-4-01
+controller arguments
+
+https://www.rubyguides.com/2018/06/rubys-method-arguments/
+
+Double splat
+
+https://medium.com/@sologoubalex/parameter-with-double-splat-operator-in-ruby-d944d234de34
+
+==================================================================
+
+Rails Strong Params
+
+https://smartlogic.io/blog/permitting-nested-arrays-using-strong-params-in-rails/
+
+https://medium.com/@tbrisker/strong-parameters-in-rails-down-the-rabbit-hole-2426d331625
+
+
+
+==================================================================
+
+Devise Registration Controller - Split full name and populate first and last name attributes
+
+https://stackoverflow.com/questions/47932187/combining-two-form-input-into-one-db-entry
+
+https://stackoverflow.com/questions/33358299/devise-registration-controller-split-full-name-and-populate-first-and-last-nam
+
+==================================================================================
+Active Storage Overview
+
+https://guides.rubyonrails.org/v6.1/active_storage_overview.html
+
+====================================================================================================================================
+Devise for unpermitted parameters
+
+https://stackoverflow.com/questions/35668465/devise-unpermitted-parameters
+====================================================================================================================================
+CARTS
+
+https://medium.com/table-xi/shopping-carts-users-and-ids-949596640b1e
+====================================================================================================================================
+
+
+
+
+====================================================================================================================================
+TO-DO
+
+handle many pictures for products
+Ajax for comments and addition/creation/updation in line-items
+
+<%# error handling, generatinf mails w devided %>
+
+https://www.bogotobogo.com/RubyOnRails/RubyOnRails_Devise_Authentication_Sending_Confirmation_Email.php
+
+====================================================================================================================================
+
+Rending Rails View on bootstrap model
+
+https://stackoverflow.com/questions/33767756/render-a-rails-view-in-a-bootstrap-modal
+
+=======================================================================================================================================
+
+======================================================================================================================
+Rails: Cannot have a has_many :through association before association is defined
+
+https://stackoverflow.com/questions/53074430/rails-cannot-have-a-has-many-through-association-before-association-is-defined
+
+==================================================================
+rails-how-to-refresh-table-search-results-with-ajax-call
+
+https://stackoverflow.com/questions/52280894/rails-how-to-refresh-table-search-results-with-ajax-call
+
+==================================================================
+
+How to Implement business rules in Rails
+
+https://stackoverflow.com/questions/5004380/how-to-implement-business-rules-in-rails
+
+==================================================================
+Presenter
+
+https://www.rubyguides.com/2019/09/rails-patterns-presenter-service/
+
+https://oozou.com/blog/abstracting-ruby-on-rails-view-logic-with-presenters-51
 
 
 ==================================================================
+IMPORTANT
+
+https://stackoverflow.com/questions/24314584/run-a-callback-only-if-an-attribute-has-changed-in-rails
+
+https://stackoverflow.com/questions/15873242/rails-how-to-reference-current-object-in-model
 ==================================================================
-==================================================================
-==================================================================
-==================================================================
-==================================================================
-==================================================================
-==================================================================
+
+UI/UX
+
+https://careerfoundry.com/en/blog/ux-design/get-your-first-taste-of-ux-design-with-ux-fundamentals/
+
+https://mdbootstrap.com/docs/standard/extended/shopping-carts/
+
+https://mdbootstrap.com/docs/standard/layout/flexbox/
+
+https://www.cloudways.com/blog/ecommerce-website-design-examples/
+
+https://bootstrap-ecommerce.com/components.html#
+
+
+https://freefrontend.com/bootstrap-product-cards/
+
+
+https://mdbootstrap.com/snippets/jquery/mdbootstrap/102381#js-tab-view
+
+https://mdbootstrap.com/docs/standard/extended/product-cards/
+
+https://mdbootstrap.com/docs/standard/extended/comments/
+
+https://mdbootstrap.com/docs/standard/extended/product-cards/
+
+https://freefrontend.com/bootstrap-order-details-and-tracking/
+
+https://bbbootstrap.com/snippets/bootstrap-order-confirmation-invoice-bill-template-49857128
+
+https://mdbootstrap.com/docs/standard/extended/order-details/
+
+
+======================================================================
+
+PUNDIT
+
+https://stackoverflow.com/questions/26177368/rails-pundit-argumenterror
+
+https://www.google.com/search?channel=fs&client=ubuntu&q=what+does+application+policy+do+in+pundit
+
+https://www.google.com/search?channel=fs&client=ubuntu&q=what+does+application+policy+do+in+pundit
+
+https://medium.com/@stacietaylorcima/implement-user-authorization-with-pundit-rails-80d921cdbf28
+
+https://www.rubydoc.info/gems/pundit
+
+
+
+=============================================================================
+
+Services
+
+
+https://www.turing.com/kb/refactoring-your-rails-app-with-rails-service-objects
+https://www.toptal.com/ruby-on-rails/rails-service-objects-tutorial
+
+
+
+
+else cases handle-> in only one controller
+
+=============================================================================
+
+default scope, customer scope
+
+=============================================================================
+
+befiler, vakeel online
+
+
+=============================================================================
+Self.abstract = true
+
+https://www.ruby-forum.com/t/need-help-understanding-self-abstract-class-true-in-ar/67288
+
+=============================================================================
+RSPECS
+
+
+https://relishapp.com/rspec/rspec-rails/docs/controller-specs
+
+https://relishapp.com/rspec/rspec-rails/v/6-0/docs
+
+https://relishapp.com/rspec/rspec-rails/v/6-0/docs/gettingstarted
+
+https://relishapp.com/rspec/rspec-rails/docs/controller-specs/controller-spec
+
+https://www.youtube.com/watch?v=AAqPc0j_2bg
+
+
+https://medium.com/@amliving/my-rails-rspec-set-up-6451269847f9
+
+https://stackoverflow.com/questions/59963450/ruby-on-rails-how-to-test-a-controller
+
+https://deanin.com/blog/rspec-rails/
+
+https://guides.rubyonrails.org/testing.html
+
+https://www.bacancytechnology.com/blog/dockerize-rails-application
+
+
+https://medium.com/just-tech/rspec-controller-or-request-specs-d93ef563ef11
+=============================================================================
+
+Rspec error
+
+https://stackoverflow.com/questions/53942076/actioncontrollerurlgenerationerror-no-route-matches-rspec/53942785
+
+
+
+ =================================================================================
+
+ Dockerize your rails app
+
+ https://www.bacancytechnology.com/blog/dockerize-rails-application
+
+===============================================================================
+
+Git
+
+https://www.youtube.com/watch?v=Uszj_k0DGsg&t=1916s
